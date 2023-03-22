@@ -1,0 +1,34 @@
+/**
+Creat database
+**/
+
+CREATE TABLE book_store (id INTEGER PRIMARY KEY, title TEXT, cost INTEGER, location INTEGER, genre TEXT, inventory INTEGER, publisher TEXT, cover_color TEXT, author TEXT);
+
+INSERT INTO book_store VALUES (1, "Gone with the Hurricane", 11, 2, "fiction", 5, "orderly house", "black", "waldo"); 
+INSERT INTO book_store VALUES (2, "Hope House", 10, 1, "philosophy", 2, "Lasevier", "red", "ralph");
+INSERT INTO book_store VALUES (3, "Where the Tame things Were", 8, 4, "childrens", 10, "mr seuss and co", "blue", "meril streep");
+INSERT INTO book_store VALUES (4, "Dory Pogharts and the Mathmaticians Rock", 22, 4, "childrens", 24, "mr seuss and co", "red", "Draco");
+INSERT INTO book_store VALUES (5, "Aligators all the way down", 20, 3, "teen fiction", 13, "orderly house", "blue", "john blue");
+INSERT INTO book_store VALUES (6, "Looking for Detroit", 18, 3, "teen fiction", 8, "orderly house", "red", "john blue");
+INSERT INTO book_store VALUES (7, "Pride and Acceptance", 7, 2, "fiction", 3, "Alliance", "rainbow", "gary lee");
+INSERT INTO book_store VALUES (8, "Not getting things done", 10, 1, "self help", 4, "Alliance", "blue", "allen davidson");
+INSERT INTO book_store VALUES (9, "Phylosophy unbounded", 25, 1, "phylosophy", 6, "Lasevier", "black", "Smarticus");
+INSERT INTO book_store VALUES (10, "The picture of Gorian Drey", 11, 2, "fiction", 6, "orderly house", "grey", "Gorian Drey");
+INSERT INTO book_store VALUES (11, "The perfection in our rainbows", 18, 3, "teen fiction", 13, "orderly house", "blue", "john blue"); 
+INSERT INTO book_store VALUES (12, "Dragons love anchovies", 8, 4, "childrens", 5, "play and read", "yellow", "sir edward knight");
+INSERT INTO book_store VALUES (13, "So you need help?", 12, 1, "self help", 3, "Alliance", "red", "messa helpu");
+INSERT INTO book_store VALUES (14, "Mammals!", 6, 4, "childrens", 4, "play and read", "red", "sir edward knight");
+INSERT INTO book_store VALUES (15, "Fish!", 6, 4, "childrens", 4, "play and read", "blue", "sir edward knight"); 
+
+/** 
+Sort: by cost and by location
+**/
+SELECT * FROM book_store ORDER BY cost desc;
+SELECT * FROM book_store ORDER BY location;
+
+/**
+Finding a book for a patron based on genre and cover color
+**/
+SELECT * FROM book_store ORDER BY cover_color;
+SELECT * FROM book_store WHERE genre = "childrens" and cover_color = "red";
+
